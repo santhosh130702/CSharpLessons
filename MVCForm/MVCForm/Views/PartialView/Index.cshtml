@@ -1,0 +1,27 @@
+﻿
+@{
+    var all_route_parms = new Dictionary<string, string>
+    {
+    {"x","200"},{"y","50"}
+    };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a asp-action="Add" asp-controller="Calculator"
+        asp-route-x="256" asp-route-y="6">calladd asp-route</a>
+    </div>
+    <div>
+        <a asp-action="Add" asp-controller="Calculator"
+           asp-all-route-data="all_route_parms">calladd all_route_parms</a>
+    </div>
+    @await Html.PartialAsync("ChildList")
+</body>
+</html>

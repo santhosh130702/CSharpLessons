@@ -1,0 +1,9 @@
+﻿@model MVNwin.Models.CustomerViewModel
+<div>
+	<h4>CustomerIds</h4>
+	<hr />
+	<form asp-asp-controller="Customer" method="post" asp-action="Details">
+		<select asp-for="id" asp-items="Model.orderList"></select>
+		<button type="submit">Details</button>
+	</form>
+</div>

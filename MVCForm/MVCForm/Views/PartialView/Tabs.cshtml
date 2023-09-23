@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Tabs";
+}
+@* <style>
+    #_FirstTab{
+        background-color:pink;
+    }
+    #_SecondTab{
+        background-color: pink;
+    }
+    #_ThirdTab{
+        background-color: pink;
+    } *@
+</style>
+<div>
+    <ul id="tabstrip" class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#_FirstTab" role="tab" data-toggle="tab">submission |</a>
+        </li>
+        <li>
+            <a href="#_SecondTab" role="tab" data-toggle="tab"> search |</a>
+        </li>
+        <li>
+            <a href="#_ThirdTab" role="tab" data-toggle="tab"> comments</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="_FirstTab">
+            <partial name="Score" />
+        </div>
+        <div class="tab-pane fade" id="_SecondTab">
+            <partial name="ChildList" />
+        </div>
+        <div class="tab-pane fade" id="_ThirdTab">
+            <partial name="ChildViewData" view-data="ViewData" />
+        </div>
+    </div>
+</div>
+<hr/>
+<div>
+    <partial name="Score" />
+    <partial name="ChildList" />
+    <partial name="ChildViewData" view-data="ViewData" />
+</div>
+
